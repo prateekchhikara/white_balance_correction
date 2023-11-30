@@ -51,7 +51,7 @@ beta for KL-divergence = 0.00025
 
 # Loss curves
 
-![Loss Curves](figures/loss_curves.png){: width="200px"}
+![Loss Curves](figures/loss_curves.png =250x)
 
 
 # Outputs
