@@ -69,21 +69,22 @@ def train_vae_with_lr_schedule(model, train_dataloader, val_dataloader, num_epoc
 if __name__ == "__main__":
     data_dir = "demo_images/" # directory structure: two subfolders --> GT and input
     batch_size = 64
+    num_epochs = 500
+    initial_lr = 1e-3
+    save__model_path = 'best_model.pth'
 
     # Create datasets for train, val, and test
     train_dataset = ImageDataset(root_dir=data_dir, split='train')
     val_dataset = ImageDataset(root_dir=data_dir, split='val')
     
-
     # Create data loaders for train, val, and test
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
     
-
     # Set the latent size according to your choice
     latent_size = 128
     vae_model = VAE(latent_size)
 
     # training begins
-    train_vae_with_lr_schedule(vae_model, train_dataloader, val_dataloader)
+    train_vae_with_lr_schedule(vae_model, train_dataloader, val_dataloader, num_epochs, initial_lr, save__model_path)
 
