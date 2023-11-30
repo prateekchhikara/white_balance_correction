@@ -1,4 +1,4 @@
-# white_balance_correction
+# White Balance Correction
 
 White balance correction is a process used in photography and videography to ensure that colors appear natural and accurate in an image or video. The term "white balance" refers to the adjustment of colors in a way that white objects appear truly white, regardless of the lighting conditions under which the photo or video was taken.
 
@@ -44,16 +44,18 @@ For experiments, Set 2 is considered. Set 2 contains 2,881 rendered images and t
 2. Kullback-Leibler Divergence (kl_divergence): Regularizes the latent space by encouraging its distribution to be close to a standard normal distribution.
 
 ## Hyper-parameters
-learning rate = 1e-3
-latent size = 128
-batch size = 64
+learning rate = 1e-3 \
+latent size = 128 \
+batch size = 64 \
 beta for KL-divergence = 0.00025
 
 # Loss curves
 
-![Loss Curves](figures/loss_curves.png){: width="300px"}
+![Loss Curves](figures/loss_curves.png){: width="200px"}
 
 
 # Outputs
+
+Bilateral filtering is performed to smooth the noise in the outputs.
 
 ![Output](figures/output.png)
